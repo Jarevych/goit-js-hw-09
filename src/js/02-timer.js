@@ -1,4 +1,4 @@
-import { Report } from 'notiflix/build/notiflix-report-aio';
+import Notiflix from 'notiflix';
 import flatpickr from "flatpickr";
 // Додатковий імпорт стилів
 import "flatpickr/dist/flatpickr.min.css";
@@ -23,7 +23,7 @@ const options = {
       firstSelectedDate = new Date(selectedDates[0]);
       currentDate = new Date();
     if(firstSelectedDate.getTime() <= currentDate.getTime()) {
-        alert("Please choose a date in the future") 
+      Notiflix.Report.failure("Please choose a date in the future") 
     };
       startBtn.disabled = false;
       updateTimer();
@@ -66,7 +66,6 @@ function convertMs(ms) {
     const minutes = Math.floor(((ms % day) % hour) / minute);
     // Remaining seconds
     const seconds = Math.floor((((ms % day) % hour) % minute) / second);
-    console.log(seconds)
     daysEl.textContent = `${days}`;
     hoursEl.textContent = `${hours}`;
     minutesEl.textContent = `${minutes}`;
