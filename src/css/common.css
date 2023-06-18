@@ -19,5 +19,40 @@ img {
 .timer-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+.date-input {
+  width: 310px;
+  margin: 0 auto;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  text-align: center;
+}
+.date-btn {
+  width: 310px;
+  margin: 0 auto;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: mediumspringgreen;
+  border: 0;
+
+}
+.timer {
+  display: flex;
   flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+}
+.value {
+  font-size: 32px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
 }
