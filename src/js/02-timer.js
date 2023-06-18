@@ -10,6 +10,7 @@ const minutesEl = document.querySelector('span[data-minutes]');
 const secondsEl = document.querySelector('span[data-seconds]');
 const startBtn = document.querySelector("button");
 let ms = null;
+let timerId = null;
 
 const options = {
     enableTime: true,
