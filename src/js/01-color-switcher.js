@@ -14,9 +14,11 @@ startBtn.addEventListener('click', () => {
     timerId = setInterval(() => {
         bodyEl.style.backgroundColor = getRandomHexColor()
     } , 1000);
+    startBtn.disabled = true;
 } );
 
 stopBtn.addEventListener('click',() => {
     clearInterval(timerId);
+    startBtn.disabled = false;
 } );
 
